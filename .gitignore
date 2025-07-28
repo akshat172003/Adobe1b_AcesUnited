@@ -112,4 +112,7 @@ Thumbs.db
 # Project specific
 input/
 output/
-*.pdf 
+*.pdf
+
+# Docker
+.dockerignore 

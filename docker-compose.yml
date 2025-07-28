@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  pdf-analyzer:
+    build: .
+    container_name: adobe1b-pdf-analyzer
+    volumes:
+      # Mount input folder for PDF files
+      - ./input:/app/input
+      # Mount output folder for results
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    # Run in detached mode by default
+    stdin_open: false
+    tty: false 
